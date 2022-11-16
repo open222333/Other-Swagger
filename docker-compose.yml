@@ -1,0 +1,10 @@
+version: '3'
+services:
+  swagger-ui:
+   image: swaggerapi/swagger-ui
+   container_name: swagger_ui_container
+   env_file: .env
+   ports:
+      - "8081:8080"
+   volumes:
+      - ./doc:/usr/share/nginx/html/doc
